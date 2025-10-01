@@ -1,0 +1,20 @@
+{
+  "name": "ga2-c5e26e",
+  "image": "mcr.microsoft.com/devcontainers/universal:latest", // Use a robust base image that supports features
+  "features": {
+    "ghcr.io/devcontainers/features/python:1": {
+      // Configuration for the Python feature
+      "version": "latest"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "astral-sh.uv",
+        "ms-python.python"
+      ]
+    }
+  },
+  "postCreateCommand": "uv pip install fastapi",
+  "remoteUser": "root" // Ensures permissions for package installation
+}
